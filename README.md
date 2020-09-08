@@ -1,4 +1,4 @@
-#React Test - Daniel Hardiman - 08/10/20
+#React Test - Daniel Hardiman - 08/09/20
 ***
 
 Thank you for your consideration for the role of React Developer.
@@ -54,5 +54,8 @@ It stated 4rem but didnt look like the design so I chamnged it to 6rem
 **Gatsby Image**
 I need to do more research on Gatby-image. I couldnt get it to full size while using it so I switched to Import it myself.
 Looks like a Handy feature though.
+
+**Mobile**
+Button arrow comes off line on tablet and below => change from baseline to center for tablet/mobile
 
 
