@@ -1,0 +1,39 @@
+@font-face{
+    font-family: "ProbaPro-Bold";
+    src: url('ProbaPro/ProbaPro-Bold.woff')
+    format("woff");
+    font-display: auto;
+    font-style: normal;
+}
+@font-face{
+    font-family: "ProbaPro-XLight";
+    src: url('ProbaPro/ProbaPro-ExtraLight.woff')
+    format("woff");
+}
+@font-face{
+    font-family: "ProbaPro-Light";
+    src: url('ProbaPro/ProbaPro-Light.woff')
+    format("woff");
+}
+@font-face{
+    font-family: "ProbaPro-LightItalic";
+    src: url('ProbaPro/ProbaPro-LightItalic.woff')
+    format("woff");
+    font-display: swap;
+    font-style: normal;}
+
+@font-face{
+    font-family: "ProbaPro-Medium";
+    src: url('ProbaPro/ProbaPro-Medium.woff')
+    format("woff");
+}
+@font-face{
+    font-family: "ProbaPro-Regular";
+    src: url('ProbaPro/ProbaPro-Regular.woff')
+    format("woff");
+}
+@font-face{
+    font-family: "ProbaPro-SemiBold";
+    src: url('ProbaPro/ProbaPro-SemiBold.woff')
+    format("woff");
+}

@@ -1,38 +1,37 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
+export const breakpoints = {
+  sm: 350,
+  md: 700,
+  mdP: 780,
+  lg: 900,
+  xl: 1040,
+}
+
+export const mediaQueries = key => {
+  return style => `@media (max-width: ${breakpoints[key]}px) { ${style} }`
+}
 
 export const MainWrapper = styled.div`
-  margin: 0;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
   min-height: 100vh;
   flex-direction: column;
-`
+`;
 
+// ! BELLOW I CHANGED THE COLOUR OF THE BACKGROUND @1800PX AS A LINE WAS SHOWING WHEN RESIZING => WHITE STARTS @40%
 export const Container = styled.div`
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 0px 1.0875rem;
-  padding-top: 0;
-`
-export const Row = styled.div`
-  display: flex;
-  flex: ${props => (props.flex ? props.flex : "initial")};
-  flex-direction: row;
-  flex-wrap: ${props => (props.wrap ? props.wrap : "initial")};
-  align-content: ${props =>
-    props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${props =>
-    props.justifyContent ? props.justifyContent : "initial"};
-  @media screen and (max-width: 768px) {
-    flex-direction: ${props => (props.mobile ? "column" : "row")};
-  }
-`
-export const Column = styled.div`
-  flex: ${props => (props.flex ? props.flex : "initial")};
-  flex-direction: column;
-  align-content: ${props =>
-    props.alignContent ? props.alignContent : "initial"};
-  justify-content: ${props =>
-    props.justifyContent ? props.justifyContent : "initial"};
-  margin: ${props => (props.margin ? props.margin : "0")};
-  width: ${props => (props.width ? props.width : "auto")};
-`
+  background: ${(props) =>
+    props.width < 1800
+      ? "linear-gradient(to right, rgba(191, 191, 191, 0.5),  #ffffff 40%)"
+      : "rgba(191, 191, 191, 0.5)"};
+  width: 100%;
+  max-width: 1923px;
+  min-height: 623px;
+  ${mediaQueries('md')(`min-height: 100vh`)}
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+`;
+

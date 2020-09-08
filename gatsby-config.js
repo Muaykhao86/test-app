@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter w/ styled-components`,
-    description: `Gatsby starter using styled-components`,
-    author: `@blakenoll`,
+    title: `test-app`,
+    description: `react-test for gobsmack`,
+    author: `Daniel Hardiman`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -18,14 +18,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `app-test`,
+        short_name: `test`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["ProbaPro-Bold", "ProbaPro-XLight", "ProbaPro-Light", "ProbaPro-LightItalic", "ProbaPro-Medium", "ProbaPro-Regular", "ProbaPro-SemiBold"],
+          urls: ["/fonts/fonts.css"],
+        }
+      }
     },
     `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
