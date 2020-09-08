@@ -33,7 +33,6 @@ react-test/wallet.json'. This request has been blocked; the content must be serv
 
 HOSTED BY LOCALHOST
 - Reason: CORS header ‘Access-Control-Allow-Origin’ missing
-- If I use mode: 'no-cors' I get nothing
 
 I would usually look at the server and see what headers are present and allow access to the website im fetching from.
 Works fine through postman and firefox dev tools.
