@@ -48,28 +48,16 @@ const HomePage = () => {
     walletTarget: 600,
   });
 
+  // ! NOT FETCHING
   useEffect(() => {
     const getData = async () => {
       try {
-        // ! (Reason: CORS header ‘Access-Control-Allow-Origin’ missing)
         const url = "http://buildingbrands.co/react-test/wallet.json";
-        const res = await fetch(url, {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json'
-          },
-        })
+        const res = await fetch(url)
         const data = await res.json();
-        if (!data.ok) {
-          throw new Error(data.statusText);
-        }
         await setState(data);
-        // ! NOT FETCHING 
-        console.log('below',data)
-      } catch (error) {
-        console.log(error);
-      }
-    };
+        if (!data.ok)  throw new Error(data.statusText);
+    }catch(error){console.log(error)};}
     getData();
   }, []);
 
